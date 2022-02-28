@@ -1,0 +1,23 @@
+<div style="font-family: 'Brush Script MT', cursive;font-size: 30px;color: red;" class="center">Delivery List</div>
+<table class="table center">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>Wishes</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor='let item of deliveryListData | paginate:{itemsPerPage: 10, currentPage:p}'>
+            <td>{{item.firstName}}</td>
+            <td>{{item.lastName}}</td>
+            <td>{{item.address}}</td>
+            <td>{{item.wishes}}</td>
+        </tr>
+    </tbody>
+</table>
+<div id="pagination" class="center">
+    <pagination-controls (pageChange)="p=$event"></pagination-controls>
+</div> 

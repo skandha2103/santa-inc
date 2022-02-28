@@ -1,0 +1,11 @@
+.pineimage{
+    float:right;
+    height:25vh;
+    transform: scaleX(-1);
+}
+
+@media (min-width: 300px) and (max-width: 1000px) {
+    .hideimage {
+      display: none;
+    }
+}
